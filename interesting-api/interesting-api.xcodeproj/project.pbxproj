@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		443E50C02603AD6E00D44B93 /* triviaLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 443E50BF2603AD6E00D44B93 /* triviaLogo.jpg */; };
 		44B46E6A25FF9D94000585A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B46E6925FF9D94000585A1 /* AppDelegate.swift */; };
 		44B46E6C25FF9D94000585A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B46E6B25FF9D94000585A1 /* SceneDelegate.swift */; };
 		44B46E6E25FF9D94000585A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B46E6D25FF9D94000585A1 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		443E50BF2603AD6E00D44B93 /* triviaLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = triviaLogo.jpg; path = ../../triviaLogo.jpg; sourceTree = "<group>"; };
 		44B46E6625FF9D94000585A1 /* interesting-api.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interesting-api.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44B46E6925FF9D94000585A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44B46E6B25FF9D94000585A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		44B46E6825FF9D94000585A1 /* interesting-api */ = {
 			isa = PBXGroup;
 			children = (
+				443E50BF2603AD6E00D44B93 /* triviaLogo.jpg */,
 				44B46E6925FF9D94000585A1 /* AppDelegate.swift */,
 				44B46E6B25FF9D94000585A1 /* SceneDelegate.swift */,
 				44B46E6D25FF9D94000585A1 /* ViewController.swift */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44B46E7625FF9D96000585A1 /* LaunchScreen.storyboard in Resources */,
+				443E50C02603AD6E00D44B93 /* triviaLogo.jpg in Resources */,
 				44B46E7325FF9D96000585A1 /* Assets.xcassets in Resources */,
 				44B46E7125FF9D94000585A1 /* Main.storyboard in Resources */,
 			);
