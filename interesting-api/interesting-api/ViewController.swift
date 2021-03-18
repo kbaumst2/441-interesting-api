@@ -31,6 +31,7 @@ class ViewController: UIViewController {
     @IBOutlet var button: UIButton!
     @IBOutlet var questionLabel: UILabel!
     @IBOutlet var answerLabel : UILabel!
+    @IBOutlet var resultLabel: UILabel!
     var synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,15 @@ class ViewController: UIViewController {
    //     utterance.voice?.gender = AVSpeechSynthesisVoiceGender.female
         synthesizer.speak(utterance)
         answerLabel.text = "Correct answer: " + currentAnswer
+        
+        if(currentAnswer.lowercased() == textField.text?.lowercased() ){
+            resultLabel.text = "Correct!"
+        }
+        else{
+            resultLabel.text = "Incorrect!"
+        }
+        
+        
     }
     
     @IBAction func getNewQuestion(sender: UIButton){
@@ -82,7 +92,7 @@ class ViewController: UIViewController {
         
     
     }
-        
+    
     
             
     

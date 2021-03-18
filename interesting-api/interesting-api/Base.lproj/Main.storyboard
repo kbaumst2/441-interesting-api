@@ -117,8 +117,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BhN-jx-hyt">
+                                <rect key="frame" x="130" y="742" width="154" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correct answer: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJj-sQ-aNy">
-                                <rect key="frame" x="38" y="693" width="288" height="71"/>
+                                <rect key="frame" x="38" y="677" width="288" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
@@ -132,6 +139,7 @@
                         <outlet property="answerLabel" destination="bJj-sQ-aNy" id="c1e-yz-iiF"/>
                         <outlet property="button" destination="VDq-l1-DFu" id="Hb6-BI-Esz"/>
                         <outlet property="questionLabel" destination="MKS-ZR-lUq" id="BO3-1y-Y8p"/>
+                        <outlet property="resultLabel" destination="BhN-jx-hyt" id="bNV-5K-aab"/>
                         <outlet property="textField" destination="ifm-Nx-LYJ" id="xKK-LH-vEl"/>
                     </connections>
                 </viewController>
