@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         9 : ("What is the national dish of Spain?" , "Paella"),
         ]
     
-    var questionsUsed  : [Int] = []
+    var questionsUsed  : [Int] = [0]
     var currentQuestion : String = "What is your body’s largest organ?"
     var currentAnswer : String = "Skin"
     @IBOutlet var textField : UITextField!
@@ -43,11 +43,11 @@ class ViewController: UIViewController {
     
     @IBAction func submitAnswer(sender: UIButton){
         print("TEXT: " + (textField.text ?? ""))
-        let utterance = AVSpeechUtterance(string: "Your answer was: " + (textField.text ?? ""))
+        var utterance = AVSpeechUtterance(string: "Your answer was: " + (textField.text ?? ""))
        // synthesizer = AVSpeechSynthesizer()
         //utterance.rate = 0.2
  //       dialogue.voice = AVSpeechSynthesisVoice(language: "en-gb")
-        utterance.voice = AVSpeechSynthesisVoice(language: "el-GB")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
  //       print(AVSpeechSynthesisVoice.speechVoices())
    //     utterance.voice?.gender = AVSpeechSynthesisVoiceGender.female
         synthesizer.speak(utterance)
@@ -55,10 +55,17 @@ class ViewController: UIViewController {
         
         if(currentAnswer.lowercased() == textField.text?.lowercased() ){
             resultLabel.text = "Correct!"
+            utterance = AVSpeechUtterance(string: "This is correct, nice going!")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+            synthesizer.speak(utterance)
         }
         else{
             resultLabel.text = "Incorrect!"
+            utterance = AVSpeechUtterance(string: "This is not correct, better luck next time!")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+            synthesizer.speak(utterance)
         }
+        
         
         
     }
@@ -70,8 +77,13 @@ class ViewController: UIViewController {
         let answer = questions[questionId]?.1
         currentAnswer = answer!
 
-        questionLabel.text = "Question: " + currentQuestion
-        
+        questionLabel.text = currentQuestion
+        textField.text = ""
+        answerLabel.text = "Correct answer: "
+        resultLabel.text = ""
+        let utterance = AVSpeechUtterance(string: "The question is " + currentQuestion)
+        utterance.voice = AVSpeechSynthesisVoice(language: "el-GB")
+        synthesizer.speak(utterance)
     }
     
     
@@ -84,7 +96,10 @@ class ViewController: UIViewController {
       //  var index = 0
         for i in  0...questions.count-1 {
             if(!questionsUsed.contains(i)){
-                q = i            }
+                q = i
+                questionsUsed.append(i)
+                break
+            }
             //index += 1
         }
         
